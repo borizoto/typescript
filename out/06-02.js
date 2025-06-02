@@ -10,6 +10,19 @@
 // Note: The main purpose of the task is to leverage type extraction and advanced types to save you a lot of writing,
 // extract and use type aliases as much as possible, if you use them properly, you’ll only need to work with simple
 // short type aliases, instead of the expansive object type declarations.
+// type namesType = {
+//     fName: string;
+//     lName: string;
+//     age: number;
+//     getPersonInfo(): string;
+// }
+// type locationType = {
+//     city: string;
+//     street: string;
+//     number: number;
+//     postalCode: number;
+//     getAddressInfo(): string;
+// }
 let names = {
     fName: 'John', lName: 'Doe', age: 22, getPersonInfo() {
         return `${this.fName} ${this.lName}, age ${this.age}`;
