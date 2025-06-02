@@ -10,20 +10,20 @@
 // extract and use type aliases as much as possible, if you use them properly, you’ll only need to work with simple
 // short type aliases, instead of the expansive object type declarations.
 
-type namesType = {
-    fName: string;
-    lName: string;
-    age: number;
-    getPersonInfo(): string;
-}
+// type namesType = {
+//     fName: string;
+//     lName: string;
+//     age: number;
+//     getPersonInfo(): string;
+// }
 
-type locationType = {
-    city: string;
-    street: string;
-    number: number;
-    postalCode: number;
-    getAddressInfo(): string;
-}
+// type locationType = {
+//     city: string;
+//     street: string;
+//     number: number;
+//     postalCode: number;
+//     getAddressInfo(): string;
+// }
 
 let names = {
     fName: 'John', lName: 'Doe', age: 22, getPersonInfo() {
@@ -38,12 +38,12 @@ let locationAddeess = {
         }
 };
 
-// type namesType = typeof names;
-// type locationType = typeof locationAddeess;
-type Person = namesType & locationType;
+type NamesType = typeof names;
+type LocationType = typeof locationAddeess;
+type Person = NamesType & LocationType;
 
-function createCombinedFunction(names: namesType, location: locationType) {
-    return function (combinedObj: namesType & locationType): void {
+function createCombinedFunction(names: NamesType, location: LocationType) {
+    return function (combinedObj: Person): void {
         console.log(`Hello, ${combinedObj.getPersonInfo()} from ${combinedObj.getAddressInfo()}`)
     }
 }
