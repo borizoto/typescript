@@ -14,4 +14,6 @@ class Book {
 }
 const book = new Book("1984", "George Orwell");
 console.log(`${book.title} by ${book.author}`);
+// book.title = "Brave New World";
+// book.author = "Terry Pratchet";
 //# sourceMappingURL=08-03.js.map
