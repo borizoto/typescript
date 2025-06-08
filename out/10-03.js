@@ -28,6 +28,6 @@ class User {
 // userA.username = "johnDoe";
 // console.log(userA.username);
 // const userA = new User("jo"); 
-const userA = new User("Martin");
-userA.username = "Do";
+// const userA = new User("Martin");
+// userA.username = "Do";
 //# sourceMappingURL=10-03.js.map

@@ -35,5 +35,5 @@ class User {
 
 // const userA = new User("jo"); 
 
-const userA = new User("Martin");
-userA.username = "Do";
+// const userA = new User("Martin");
+// userA.username = "Do";
