@@ -2,6 +2,13 @@
 // 7. Validate User
 // Your task is to create a type predicate function that receives a single object parameter and validates whether it is a
 // valid User.
+// type User = {
+//     id: number | string,
+//     username: string,
+//     passwordHash: string | string[],
+//     status: 'Locked' | 'Unlocked' | 'Deleted',
+//     email?: string
+// }
 // An object is considered a valid user if it:
 // • Has an id of either:
 //  - type number, that has a value over 100
