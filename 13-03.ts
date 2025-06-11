@@ -19,19 +19,11 @@ class Product {
     private static productCount = 0;
     public readonly id: number;
 
-    public _name: string;
-    public price: number;
+    private _name!: string;
+    private _price!: number;
 
     constructor(name: string, price: number) {
-        if (name.length < 1) {
-            throw new Error('Product name must be at least 1 character long.');
-        }
-
-        if (price < 1) {
-            throw new Error('Product price must be greater than 0.');
-        }
-
-        this._name = name;
+        this.name = name;
         this.price = price;
         Product.productCount++;
         this.id = Product.productCount;
@@ -42,9 +34,25 @@ class Product {
         return this._name;
     }
 
+    public get price(): number {
+        return this._price;
+    }
+
 
     public set name(value: string) {
+        if (value.length < 1) {
+            throw new Error('Product name must be at least 1 character long.');
+        }
+
         this._name = value;
+    }
+
+    public set price(value: number) {
+        if (value < 1) {
+            throw new Error('Product price must be greater than 0.');
+        }
+
+        this._price = value;
     }
 
     getDetails(): string {
