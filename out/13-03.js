@@ -19,15 +19,9 @@ class Product {
     static productCount = 0;
     id;
     _name;
-    price;
+    _price;
     constructor(name, price) {
-        if (name.length < 1) {
-            throw new Error('Product name must be at least 1 character long.');
-        }
-        if (price < 1) {
-            throw new Error('Product price must be greater than 0.');
-        }
-        this._name = name;
+        this.name = name;
         this.price = price;
         Product.productCount++;
         this.id = Product.productCount;
@@ -35,8 +29,20 @@ class Product {
     get name() {
         return this._name;
     }
+    get price() {
+        return this._price;
+    }
     set name(value) {
+        if (value.length < 1) {
+            throw new Error('Product name must be at least 1 character long.');
+        }
         this._name = value;
+    }
+    set price(value) {
+        if (value < 1) {
+            throw new Error('Product price must be greater than 0.');
+        }
+        this._price = value;
     }
     getDetails() {
         return `ID: ${this.id}, Name: ${this.name}, Price: $${this.price}`;
