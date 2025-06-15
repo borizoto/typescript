@@ -2,7 +2,6 @@ export { }
 
 function log(constructor: any, methodName: string, descriptor: PropertyDescriptor) {
     const originalMethod = descriptor.value;
-    console.log('asd')
 
     descriptor.value = function (...args: any[]) {
         console.log(`Function '${methodName}' called with arguments: ${args.join(', ')}`);

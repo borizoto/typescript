@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 function log(constructor, methodName, descriptor) {
     const originalMethod = descriptor.value;
-    console.log('asd');
     descriptor.value = function (...args) {
         console.log(`Function '${methodName}' called with arguments: ${args.join(', ')}`);
         return originalMethod(args);
