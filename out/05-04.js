@@ -47,4 +47,8 @@ logger.log(LoggingLevel.Error, "A Problem happened.");
 console.log('-----------');
 console.log(logger.getFormat());
 console.log([...logger.cachedLogs.entries()].map(x => x[1].join('\n')).join('\n'));
+// let logger = new Logger<LoggingLevel, LoggingFormat>("%text"); //TS Error
+// let wronglogger = new Logger<string, LoggingLevel>(); //TS Error
+// logger.log("%s", "Running the debugger."); //TS Error
+// logger.log({format: "Test %s"}, "Running the debugger."); //TS Error
 //# sourceMappingURL=05-04.js.map
